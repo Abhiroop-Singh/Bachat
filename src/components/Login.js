@@ -1,8 +1,9 @@
 import React from "react";
+import "./login.css";
 
 const Login = () => {
   return (
-    <div className="text-center">
+    <div className="abc">
       <main className="form-signin w-100 m-auto">
         <form>
           <div className="form-floating">
