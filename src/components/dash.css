@@ -1,0 +1,35 @@
+.kalava {
+  display: flex;
+}
+button {
+  padding: 0.8rem 3em;
+  color: white;
+  margin-left: 3rem;
+  border-radius: 5px;
+}
+button[type="reset"] {
+  background-color: rgba(255, 34, 0, 0.938);
+}
+button[type="submit"] {
+  background-color: green;
+}
+button[type="submit"]:hover {
+  background-color: rgb(31, 219, 31);
+}
+button[type="reset"]:hover {
+  background-color: rgb(208, 8, 8);
+}
+h6 {
+  font-size: medium;
+  /* margin-left: 30vw; */
+}
+input {
+  width: 10vw;
+  height: 30px;
+}
+fieldset {
+  border-radius: 3rem;
+}
+legend {
+  font-size: larger;
+}
