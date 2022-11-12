@@ -1,25 +1,23 @@
 import React from "react";
 import "./app.css";
-import Services from "./components/Services";
-import Footer from "./components/Footer";
-import Masthead from "./components/Masthead";
-import Navbar from "./components/Navbar";
-import About from "./components/About";
-import PortfolioImgs from "./components/PortfolioImgs";
-import Login from "./components/Login";
+import Login from './components/Login';
+import Homepage from "./components/Homepage/homepage";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 function App() {
   return (
-    <div className="App">
-      <Navbar />
-      <br></br>
-      <br></br>
-      <Login/>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Homepage/>} />
+        <Route path='/login' element={<Login/>} />
+        {/* <Navbar />
       <Masthead />
       <About />
       <Services />
       <PortfolioImgs />
-      <Footer />
-    </div>
+    <Footer /> */}
+      </Routes>
+    </BrowserRouter>
   );
 }
 

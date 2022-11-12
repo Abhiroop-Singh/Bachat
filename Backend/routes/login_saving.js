@@ -94,27 +94,7 @@ router.post('/addData', async(req, res) => {
     }
 });
 
-// router.post("/addGraph", (req, res) => {
-//   var blood = req.body.blood;
-//   var systolic = req.body.systolic;
-//   var diastolic = req.body.diastolic;
-//   var date = req.body.date;
-//   var sugar = req.body.sugar;
-//   var emailFinding = req.body.email;
-//   if (blood > 220 || blood <= 0 || sugar > 220 || sugar <= 0) {
-//     res.status(200).json({ success: false, error: "enter valid value" });
-//   } else {
-//     user.findOne({ email: `${emailFinding}` }, async (err, item) => {
-//       if (err) {
-//         console.log(err);
-//       } else {
-//         item.dataset.push({ blood: blood, date: date, sugar: sugar,systolic:systolic,diastolic:diastolic });
-//         await item.save();
-//         res.status(200).json({ success: true });
-//       }
-//     });
-//   }
-// });
+
 
 router.post("/fetchData", async (req, res) => {
   const savings = await user.findOne({ email: req.body.email });
