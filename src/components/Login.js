@@ -23,13 +23,7 @@ const Login = () => {
             />
             <label htmlFor="floatingPassword">Password</label>
           </div>
-          <button
-            className="w-100 btn btn-lg btn-dark"
-            type="submit"
-            onClick={() => {
-              navigate("/");
-            }}
-          >
+          <button className="w-100 btn btn-lg btn-dark" type="submit">
             Sign in
           </button>
           <p className="mt-5 mb-3 text-muted">&copy;2022</p>

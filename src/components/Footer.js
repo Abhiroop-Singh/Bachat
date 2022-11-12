@@ -1,5 +1,5 @@
 import React from "react";
-
+import "../app.css";
 const Footer = () => {
   return (
     <footer class="bg-light py-5">

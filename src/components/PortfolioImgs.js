@@ -1,5 +1,5 @@
 import React from "react";
-
+import "../app.css";
 const PortfolioImgs = () => {
   return (
     <div id="portfolio">

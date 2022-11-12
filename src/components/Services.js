@@ -1,5 +1,5 @@
 import React from "react";
-
+import "../app.css";
 const Services = () => {
   return (
     <section className="page-section" id="services">

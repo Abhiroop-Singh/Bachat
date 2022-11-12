@@ -1,5 +1,5 @@
 import React from "react";
-
+import "../app.css";
 const About = () => {
   return (
     <section className="page-section bg-primary" id="about">
