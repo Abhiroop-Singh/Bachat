@@ -124,17 +124,18 @@ router.post("/fetchData", async (req, res) => {
 router.post("/register", async (req, res) => {
     var check = req.body.email;
     var aadmi = await user.findOne({ email: check });
+    console.log(aadmi)
     if (aadmi===null) {
         const hash = await bcrypt.hash(req.body.password, 10);
         const person = await user.create({
             name: req.body.name,
             email: req.body.email,
-            password: hash,
+            password: hash, 
         });
         return res.status(200).json({ success: true });
     } else {
         return res.status(200).json({ success: false, error: "username already exist" });
-    }
+    } 
 });
 
 module.exports = router;
