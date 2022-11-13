@@ -4,7 +4,7 @@ import Masthead from "../Masthead";
 import Footer from "../Footer";
 import About from "../About";
 import '../../app.css'
-import NewsCard from '../NewsCard';
+import NewsCard from '../Newscard';
 
 function homepage() {
   return (

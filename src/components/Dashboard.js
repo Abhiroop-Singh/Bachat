@@ -2,10 +2,16 @@ import React, { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import { useEffect } from "react";
 import "react-toastify/dist/ReactToastify.css";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Dashboard = () => {
-
+    useEffect(() => {
+      if(!localStorage.getItem("email")){
+        navigate("/login")
+      }
+    }, [])
+    
+    const navigate = useNavigate();
   const [monthlyIncome, setmonthlyIncome] = useState("");
   const [monthlyExpense, setmonthlyExpense] = useState("");
   const [date, setdate] = useState("");
@@ -83,6 +89,10 @@ const Dashboard = () => {
       setdate(e.target.value);
     }
   }
+  const handleLogout=()=>{
+    localStorage.removeItem("email");
+    navigate("/")
+  }
 
   return (
     <>
@@ -116,7 +126,7 @@ const Dashboard = () => {
             <div className="kalava">
               <button type="submit" onSubmit={handleSubmit}>Submit</button>
             </div>
-            <Link to='/'><button type="submit">LogOut</button></Link>
+          <button  onClick={handleLogout}>LogOut</button>
           </form>
         </fieldset>
 
