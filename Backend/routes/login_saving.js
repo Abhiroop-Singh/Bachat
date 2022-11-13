@@ -30,15 +30,20 @@ router.post("/signin", async (req, res) => {
 router.post('/addData', async(req, res) => {
     var monthlyIncome = parseInt(req.body.monthlyIncome);
     var monthlyExpense = parseInt(req.body.monthlyExpense);
+    var date = req.body.date;
+    // var today = new Date();
+    // var dd = String(today.getDate()).padStart(2, '0');
+    // var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+    // var yyyy = today.getFullYear();
 
-    var today = new Date();
-    var dd = String(today.getDate()).padStart(2, '0');
-    var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
-    var yyyy = today.getFullYear();
+    // today = dd + '/' + mm + '/' + yyyy;
 
-    today = dd + '/' + mm + '/' + yyyy;
+    // today='13/11/2022';
 
-    today='13/11/2022';
+    console.log(monthlyIncome)
+    console.log(monthlyExpense)
+    
+
 
     if ((monthlyIncome > 0 && typeof monthlyIncome === "number") && (monthlyExpense > 0 && typeof monthlyExpense === "number")) {
         // user.findOne({email:req.body.email},(err,user)=>{
@@ -60,14 +65,14 @@ router.post('/addData', async(req, res) => {
             {
                 $pull:{
                     dataset:{
-                        date:today
+                        date:date
                     }
                 }
             },
             {
                 multi:true
             }
-        ).exec();
+        );
 
         user.findOne({email:req.body.email},async(err,person)=>{
             if(err){
@@ -77,7 +82,7 @@ router.post('/addData', async(req, res) => {
                     var update={
                         "monthlyIncome":monthlyIncome,
                         "monthlyExpense":monthlyExpense,
-                        "date":today
+                        "date":date
                     }
                     person.dataset.push(update);
                     await person.save();
@@ -94,11 +99,12 @@ router.post('/addData', async(req, res) => {
     }
 });
 
-
-
 router.post("/fetchData", async (req, res) => {
   const savings = await user.findOne({ email: req.body.email });
-  res.status(200).json({ data: savings.dataset, user: savings.name });
+  if(savings!=null){
+      res.status(200).json({ data: savings.dataset, user: savings.name });
+    }
+    console.log(req.body.email);
 });
 
 router.post("/register", async (req, res) => {

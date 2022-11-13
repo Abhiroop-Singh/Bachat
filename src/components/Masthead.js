@@ -1,4 +1,5 @@
 import React from "react";
+import "../app.css"
 
 const Masthead = () => {
   return (
@@ -8,18 +9,16 @@ const Masthead = () => {
           <div className="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
             <div className="col-lg-8 align-self-end">
               <h1 className="text-white font-weight-bold">
-                Your Favorite Place for Free Bootstrap Themes
+                Your First Step Towards Financial Literacy
               </h1>
               <hr className="divider" />
             </div>
             <div className="col-lg-8 align-self-baseline">
               <p className="text-white-75 mb-5">
-                Start Bootstrap can help you build better websites using the
-                Bootstrap framework! Just download a theme and start
-                customizing, no strings attached!
+                Track your expense and learn how to invest
               </p>
-              <a className="btn btn-primary btn-xl" href="#about">
-                Find Out More
+              <a className="btn btn-primary btn-xl" href="#news">
+                Read Latest News
               </a>
             </div>
           </div>

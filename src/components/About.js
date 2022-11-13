@@ -1,5 +1,5 @@
 import React from "react";
-
+import "../app.css"
 const About = () => {
   return (
     <section className="page-section bg-primary" id="about">
@@ -9,11 +9,9 @@ const About = () => {
             <h2 className="text-white mt-0">We've got what you need!</h2>
             <hr className="divider divider-light" />
             <p className="text-white-75 mb-4">
-              Start Bootstrap has everything you need to get your new website up
-              and running in no time! Choose one of our open source, free to
-              download, and easy to use themes! No strings attached!
+              Register in order to Avail Our Services
             </p>
-            <a className="btn btn-light btn-xl" href="#services">
+            <a className="btn btn-light btn-xl" href="/register">
               Get Started!
             </a>
           </div>
