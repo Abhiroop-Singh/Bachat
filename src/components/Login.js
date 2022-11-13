@@ -133,6 +133,8 @@ const Login = () => {
             <button className="w-100 btn btn-lg btn-dark" onClick={handleClick}>
               Sign in
             </button>
+            <br/>
+          <p>Not a Member ? <a href="/register" style={{color:"blue"}}><u>Signup Now</u></a></p>
             <p className="mt-5 mb-3 text-muted">&copy;2022</p>
           </form>
         </main>

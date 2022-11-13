@@ -9,7 +9,7 @@ const Masthead = () => {
           <div className="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
             <div className="col-lg-8 align-self-end">
               <h1 className="text-white font-weight-bold">
-                Your First Step Towards Financial Literacy
+                Your First Step Towards Financial Freedom
               </h1>
               <hr className="divider" />
             </div>

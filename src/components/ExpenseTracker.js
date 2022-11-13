@@ -34,7 +34,7 @@ const Dashboard = () => {
         const finalData = await res.json();
         setUserName(finalData.user);
         setdata(finalData.data);
-        console.log(finalData);
+        console.log(finalData.data);
     };
 
     useEffect(() => {
@@ -155,9 +155,11 @@ const Dashboard = () => {
                                 <button onClick={handleLogout} id="spn2">LogOut</button>
                             </span>
                         </form>
+                        <br/>
+                        <p>Back to <a href="/dashboard" style={{color:"blue"}}>Dashboard</a></p>
                     </fieldset>
                 </div>
-                <div id="tabbox" style={{ marginTop: '5rem' }}>
+                <div id="tabbox" style={{ marginTop: '3rem' }}>
                     <h3 style={{ textAlign: 'center', marginBottom: '2rem' }}>{userName}'s Monthly Expense :</h3>
                     <table>
                         <thead>
