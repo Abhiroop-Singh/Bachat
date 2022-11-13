@@ -1,8 +1,9 @@
-import React from "react";
+import React from "react"
 import "../app.css"
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom"
 
 const Navbar = () => {
+
   return (
     <div>
       <nav
@@ -36,7 +37,7 @@ const Navbar = () => {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/login">
+                <Link className="nav-link" to='/login'>
                   SignIn
                 </Link>
               </li>
