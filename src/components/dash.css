@@ -1,44 +1,47 @@
-.kalava {
-    display: flex;
+table {
+    /* border-collapse: collapse; */
+    width: 50rem;
+    margin: auto;
+  }
+  th,
+  td {
+    border: 1px solid #ffffff;
+    text-align: center;
+    padding: 8px;
+    padding-top:10px
+    /* font-size: px; */
+  }
+  
+  th {
+    background-color: rgb(117, 201, 250);
+  }
+  
+  td {
+    background-color: rgb(205, 235, 253);
+  }
+  #tabbox{
+    border:1px solid black;
+    border-radius:2px;
+    padding: 2rem 3rem;
+    margin-bottom:2rem;
+    background-color: rgb(245, 253, 253);
 }
+#asn{
+      border:1px solid black;
+      border-radius:2px;
+      padding: 2rem 3rem;
+      margin-bottom:2rem;
+      margin-top:2rem;
+      background-color: rgb(170, 196, 196);
 
-button {
-    padding: 0.8rem 3em;
-    color: white;
-    margin-left: 3rem;
-    border-radius: 5px;
+  }
+  #spn2{
+    margin-top:1rem;
+    border:0.1px solid black;
+    margin-left:2rem;
 }
+#spn1{
+      margin-top:1rem;
+      border:0.1px solid black;
 
-button[type="reset"] {
-    background-color: rgba(255, 34, 0, 0.938);
-}
-
-button[type="submit"] {
-    background-color: green;
-}
-
-button[type="submit"]:hover {
-    background-color: rgb(31, 219, 31);
-}
-
-button[type="reset"]:hover {
-    background-color: rgb(208, 8, 8);
-}
-
-h6 {
-    font-size: medium;
-    /* margin-left: 30vw; */
-}
-
-input {
-    width: 10vw;
-    height: 30px;
-}
-
-fieldset {
-    border-radius: 3rem;
-}
-
-legend {
-    font-size: larger;
-}
+  }
