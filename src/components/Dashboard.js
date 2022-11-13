@@ -4,8 +4,9 @@ import "./dash.css";
 const Dashboard = () => {
   return (
     <div className="container">
-      <fieldset>
-        <legend>Expenses</legend>
+      <form action="" method="post"></form>
+      <fieldset className="exp">
+        <legend className="leg">Expenses</legend>
         <form action="" method="post" autoComplete="on">
           <div className="kalava">
             <h6>Monthly Income</h6>
@@ -20,8 +21,13 @@ const Dashboard = () => {
             <input type="date" name="" id="" />
           </div>
           <div className="kalava">
-            <button type="submit"> Submit</button>
-            <button type="reset">Reset</button>
+            <button type="submit" className="b">
+              {" "}
+              Submit
+            </button>
+            <button type="reset" className="b">
+              Reset
+            </button>
           </div>
         </form>
       </fieldset>

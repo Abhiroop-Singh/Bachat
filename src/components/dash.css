@@ -1,35 +1,55 @@
+.container {
+  inherits: unset;
+  background: rgba(182, 193, 238, 0.2);
+  box-shadow: 0 6px 20px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4.5px);
+  -webkit-backdrop-filter: blur(4.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
 .kalava {
   display: flex;
+  inherits: unset;
 }
-button {
+.b {
   padding: 0.8rem 3em;
   color: white;
   margin-left: 3rem;
   border-radius: 5px;
+  inherits: unset;
 }
-button[type="reset"] {
+.b[type="reset"] {
   background-color: rgba(255, 34, 0, 0.938);
+  inherits: unset;
 }
-button[type="submit"] {
+.b[type="submit"] {
   background-color: green;
+  inherits: unset;
 }
-button[type="submit"]:hover {
+.b[type="submit"]:hover {
   background-color: rgb(31, 219, 31);
+  inherits: unset;
 }
-button[type="reset"]:hover {
+.b[type="reset"]:hover {
   background-color: rgb(208, 8, 8);
+  inherits: unset;
 }
 h6 {
   font-size: medium;
+  inherits: unset;
   /* margin-left: 30vw; */
 }
 input {
+  inherits: unset;
   width: 10vw;
   height: 30px;
 }
-fieldset {
+.exp {
+  /* border: 1px solid black; */
   border-radius: 3rem;
+  inherits: unset;
 }
-legend {
+.leg {
+  inherits: unset;
   font-size: larger;
 }
